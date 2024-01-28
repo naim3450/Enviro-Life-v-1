@@ -1,3 +1,4 @@
+import RoutLayout from "./components/RoutLayout";
 import Bennar from "./components/layouts/Bennar"
 import Footer from "./components/layouts/Footer"
 import HomeP from "./components/layouts/HomeP";
@@ -7,36 +8,32 @@ import WomanP from "./components/layouts/WomanP";
 
 import {
   createBrowserRouter,
-  RouterProvider,
   createRoutesFromElements,
-  Route
+  Route,
+  RouterProvider,
 } from "react-router-dom";
 
 function App() {
-  
-  // router path
+
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route>
-        <Route path="/" 
-        element={<HomeP/>} />
-
-        <Route path="/Man" 
-        element={<ManP/>} />
-
-        <Route path="/Wo-man" 
-        element={<WomanP/>} />
+        <Route path="/" element={<RoutLayout/>}>
+          <Route path="/" element={<HomeP/>}/>
+          <Route path="/Man" element={<ManP/>}/>
+          <Route path="/Woman" element={<WomanP/>}/>
+        </Route>
       </Route>
     )
   );
+  
+  // router path
+
   // router path
 
   return (
     <>
-      <Navber/>
-      <Bennar/>
       <RouterProvider router={router} />
-      <Footer/>
     </>
   )
 }
