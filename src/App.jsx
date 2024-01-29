@@ -4,6 +4,7 @@ import Footer from "./components/layouts/Footer"
 import HomeP from "./components/layouts/HomeP";
 import ManP from "./components/layouts/ManP";
 import Navber from "./components/layouts/Navber"
+import Notfound from "./components/layouts/Notfound";
 import WomanP from "./components/layouts/WomanP";
 
 import {
@@ -23,6 +24,7 @@ function App() {
           <Route path="/Man" element={<ManP/>}/>
           <Route path="/Woman" element={<WomanP/>}/>
         </Route>
+          <Route path="/:id" element={<Notfound/>}/>
       </Route>
     )
   );

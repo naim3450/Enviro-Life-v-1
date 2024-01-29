@@ -23,6 +23,12 @@ export default {
         dm: ['DM Sans']
       },
       // Font Family
+
+      // Rotate
+      rotate: {
+        25: '25deg',
+      }
+      // Rotate
     },
   },
   plugins: [],
